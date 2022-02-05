@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', media='screen', href='https://fontlibrary.org//face/glacial-indifference', type='text/css')
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css", integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js", integrity ="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2", crossorigin="anonymous")
+    .container-fluid
+      body
+        header
+          nav.navbar.navbar-expand-lg.navbar-dark
+            .container-fluid
+              a.navbar-brand.header-logo(href='/')
+                img(src='/images/Pole-Diversity.png' alt='pole logo home')
+              button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbarColor02.collapse.navbar-collapse
+                ul.navbar-nav
+                  li.nav-item.p-2
+                    a.nav-link.active(href='/')
+                      | Home
+                      span.visually-hidden
+                  li.nav-item.p-2
+                    a.nav-link.active(href='/media') Media
+                  li.nav-item.p-2
+                    a.nav-link.active(href='/blog') Blog
+                  li.nav-item.p-2
+                    a.nav-link.active(href='/schedule') Schedule
+                  li.nav-item.dropdown.p-2
+                    a.nav-link.dropdown-toggle.active(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Contact
+                    .dropdown-menu
+                      a.dropdown-item(href='/work-with-me') Work with me
+                      a.dropdown-item(href='/contact') Contact form
+                .nav-item.ml-auto
+                  a.nav-link.active(href='/about' style='color: white;') About
+        block content

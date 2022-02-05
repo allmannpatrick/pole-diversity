@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  main
+    .d-flex.flex-row
+      .w-50.p-2
+        //.text-center
+        h3 For general inquiries. To book a private or event, please go to the <a href='/booking'> booking page.</a>
+        form(action="/contact", method="post")
+          .form-group
+            label(for='email')
+            input(type="email", name="email", placeholder="email", id='email', required)
+          .form-group
+            label(for='name')
+            input(type="text", name="name", placeholder="name", id='name', required)
+          .form-group
+            label(for='message')
+            textarea(name="message" rows="5" cols="35" placeholder="message" id='message', required)
+          div
+            input(type="submit", value="Send message")
+      .w-50.p-2
+        .text-center
+          h3 Message or follow
+          a(href='https://www.instagram.com/polediversity/' target='_blank')
+            img.smaller-image(src='images/instagram-logo.png' alt="instagram-logo")
