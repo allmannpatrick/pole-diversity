@@ -42,49 +42,11 @@ exports.blog_get = function(req, res, next) {
           err.status = 404;
           return next(err);
       }
-      console.log(results.comments)
+
       // Successful, so render.
       res.render(spine, {spine: spine, title: results.post.title, data: results});
   })
-//comment_count: results.comment_count, spine: spine, post: results.post, comments: results.comments
-
-
-//   Post.findOne({spine: req.params.spine}, (err, results) => {
-//         if (err) { return next(err); } // Error in API usage.
-//         if (results==null) { // No results.
-//             let err = new Error('Post not found');
-//             err.status = 404;
-//             return next(err);
-//         }
-//         // Successful, so render.
-//         res.render(results.spine, results );
-//     }
-//   )
-// };
-
-  // async.parallel({
-  //     post: function(callback) {
-  //
-  //       Post.findOne({
-  //         spine: req.params.spine}).exec(callback)
-  //     },
-  //     book_instance: function(callback) {
-  //
-  //       Comment.find({
-  //         post: req.params.spine}).exec(callback)
-  //     },
-  // }, function(err, results) {
-  //     if (err) { return next(err); }
-  //     if (results.post==null) { // No results.
-  //         var err = new Error('Post not found');
-  //         err.status = 404;
-  //         return next(err);
-  //     }
-  //     // Successful, so render.
-  //     res.render(results.spine, { title: results.book.title, book: results.book, book_instances: results.book_instance } );
-  // });
-
-  };
+};
 
 
 exports.blog_post =  [
@@ -105,17 +67,13 @@ exports.blog_post =  [
             return;
         }
         else {
-            console.log(req.params.post)
             // Data from form is valid.
             // Create a Comment object with escaped and trimmed data.
-            //const time = new Date();
-          //  const formatted_date = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate()
             var comment = new Comment(
                 {
                     post: req.params.spine,
                     name: req.body.name,
-                    message: req.body.message,
-                    //date: formatted_date
+                    message: req.body.message
                 });
             comment.save(function (err) {
                 if (err) { return next(err); }
@@ -125,6 +83,3 @@ exports.blog_post =  [
         }
     }
 ];
-//make nicer
-//set to production
-//make time nicer
