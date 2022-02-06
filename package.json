@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allmannpatrick/pole-diversity.git"
+    "url": "git+https://github.com/ap-19927/pole-diversity.git"
   },
   "author": "ap",
   "license": "ISC",
@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/ap-19927/pole-diversity#readme",
   "dependencies": {
+    "async": "^3.2.3",
     "body-parser": "^1.19.1",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.2.0",
     "nodemailer": "^6.7.2",
     "pug": "^3.0.2"
   }

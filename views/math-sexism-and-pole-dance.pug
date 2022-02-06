@@ -65,5 +65,25 @@ block content
             a(href='https://www.insidehighered.com/news/2018/03/14/study-says-students-rate-men-more-highly-women-even-when-theyre-teaching-identical') “Same Course, Different Ratings.” Colleen Flaherty.
           li
             a(href='https://news.ufl.edu/2020/11/ta-bias/') “Study reveals gender bias in TA evaluations.” Alisson Clark.
+        section.p-1
+          h2 Comments
+          form(action="/blog/"+spine, method="post")
+            .form-group
+              label(for='name')
+              input(type="text" name="name" placeholder="name" id='name' value='name' required)
+            .form-group
+              label(for='message')
+              textarea(name="message" rows="5" cols="35" placeholder="message" id='message' value='message' required)
+            div
+              input(type="submit", value="Send message")
+          br
+          p #{data.comment_count} comments
+          each comment in data.comments
+            .d-flex.p-2
+              .w-50.p-3.card-wrap
+                p #{comment.name}
+                p #{comment.date.toDateString()}
+                p #{comment.message}
+              .w-50.p-3
     footer.float-right
       p &#169; 2021 Jody Ryker

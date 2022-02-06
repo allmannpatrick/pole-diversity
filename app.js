@@ -4,6 +4,12 @@ require('dotenv').config();
 // Common modules
 const path = require('path');
 
+// MongoDB
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true , useUnifiedTopology: true});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 // Initializing Express
 const express = require('express'),
       app = express(),
@@ -25,5 +31,24 @@ app.set('view engine', 'pug');
 //Routers
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/blog'));
+
+
+const createError = require('http-errors');
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
