@@ -29,7 +29,9 @@ nav .header-logo > img {
   width: 100px;
   height: 100px;
 }
-
+.navbar .navbar-toggler {
+  border-color: white;
+}
 .navbar-nav > li > .dropdown-menu { background-color: #969696; }
 .navbar-nav > li > .dropdown-menu >.dropdown-item:hover { background-color: #969696; }
 figcaption {

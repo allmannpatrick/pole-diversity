@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    .d-flex.justify-content-center
-      article.w-50.p-2.article-wrap
+    .container-lg
+      article.p-2.article-wrap
         main
           .text-center
             h1=title
-          figure.float-left.pr-3.p-2
+          figure.float-start.pr-3.p-2
             .img-post
               img(src='/images/post-1-img-1.png' style='width: 500px' alt='Doubles tricks at the end of a class I taught at Magnetic Pole Fit with my student Tiana.')
             figcaption
@@ -18,7 +18,7 @@ block content
             p Before I start planning a class, it’s important for me to be familiar with the space I’ll be teaching in. How many students per pole will there be? Are there crash mats? What’s the spacing between poles like? What kinds of poles are there (size, metal, what’s the base like and could it impede any floor tricks, can the poles go on spin and static). Thinking about these things helps me determine how much time is needed for each part of class and how I’ll keep students safe.
             p I also like to think about what my goals, or my students’ goals, for class are. I do this with my own training sessions as well. For example, do my students need to work on their straddle inverts to become comfortable in inverted combos? Do my students need to work on active flexibility? Having a goal in mind makes my class more focused and can help students progress more quickly.
             p Most instructors play music during their classes. This is especially helpful for warm-ups and free dances. Music can set the mood of the class and can set the warm-up pace. Creating a playlist ahead of time is ideal. I want to make sure that I’ve included songs that aren’t offensive to anyone in my class and that the tempo is right for the movements I’m teaching. I sometimes like to ask students for music suggestions as well to accommodate their preferences. If I’m not able to do this, I try to include songs in a variety of genres.
-          figure.float-right.pl-3.p-2
+          figure.float-end.pl-3.p-2
             .img-post-sq
               img(src='/images/post-1-img-2.png' style='height: 300px' alt='Teaching aerial hoop trick at UC Santa Cruz.')
             figcaption
@@ -40,7 +40,7 @@ block content
               li A “small talk” question such as “What’s something you’re looking forward to this weekend?”
             p I sometimes also ask if anyone has any injuries, however, if possible, I prefer to ask students privately about this. For my smaller classes, I usually try to check in with each student about how they’re feeling before class begins. Finally, I share any announcements that I may have, such as a new class or upcoming performance. In a beginner class, I always make sure to introduce students to the studio and venue as well - where the restrooms are, what types of poles they’ll be using, and anything else they might need to know.
             p Next, every class must include a warm-up. It is essential to warm-up the body before any training session. Skipping the warm-up increases the chance of injury. I generally use 10-30 minutes of class time for the warm-up, depending on how long the class is and what I’m teaching (if extreme flexibility is required, then more time must be spent warming up things like splits or backbends). When designing a warm-up, I think about what tricks I’ll be asking students to do and what muscles and joints are involved in these movements. It’s always necessary to warm-up shoulders and hips for pole dance. I also like to focus on active flexibility exercises and minimize passive stretching. When I put together my first warm-up, I borrowed exercises that I liked from classes I’d taken, and I also looked up YouTube warm-up videos for dance and aerial classes. Since I don’t have any formal training in exercise science, I have spent many hours learning from professionals in this. I recommend the following Instagram accounts for information on warm-up exercises, mobility drills, anatomy and more: cirque_physio (Dr. Jen Crane), technique_artist, the_artist_athlete (Shannon McKenna), thecircusdoc (Dr. Emily Scherb) and ptthepole. I also recommend the following books: Applied Anatomy of Aerial Arts: An Illustrated Guide to Strength, Flexibility Training, and Injury Prevention by Dr. Emily Scherb; Aerial Inversions for All! and One Arm Positions for Aerialists by Shannon McKenna; Strength and Conditioning for Pole by Neola Wilby (ptthepole).
-          figure.float-right.pl-3.p-2
+          figure.float-end.pl-3.p-2
             .img-post
               img(src='/images/post-1-img-3.png', alt='Teaching aerial hoop at Burning Man.')
             figcaption
@@ -111,5 +111,5 @@ block content
                 p #{comment.date.toDateString()}
                 p #{comment.message}
               .w-50.p-3
-    footer.float-right
+    footer.float-end
       p &#169; 2021 Jody Ryker

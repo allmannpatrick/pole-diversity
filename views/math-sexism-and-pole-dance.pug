@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    .d-flex.justify-content-center
-      article.w-50.p-2.article-wrap
+    .container-lg
+      article.p-2.article-wrap
         main
           .text-center
             h1=title
-          figure.float-left.pr-3.p-2
+          figure.float-start.pr-3.p-2
             .img-post
               img(src='/images/post-0-img-1.png', alt='cliff top performance')
             figcaption
@@ -23,7 +23,7 @@ block content
             p While my undergrad studies had been an overall great experience filled with supportive instructors, my graduate experience was quite different. I’m not sure what changed, but from day one, I was hyper-aware of being one of the only non-males in my cohort and my classes. I have learned now that I was suffering from stereotype threat - the fear of confirming stereotypes such as the stereotype that females are not as good at math as males. Read more about how stereotype threat can impact students below. As a shy person, I had never liked going to the board in classes, but now in a room full of men, going to the board was even more stressful.
             p Despite all of my anxiety, I successfully completed my first year of grad school. I had made some friends in my program too, and I actually found that math people were quite a bit easier for me to talk to than other people. I also had found the local circus school, and had started teaching pole dance there. Finding somewhere to train was very helpful for mitigating the stress of grad school.
             p During my second year, things started to change. I was assaulted at a party. I’m not going into the details, but it took me a long time to process this. During the first quarter of my second year, something else traumatic happened that I will not be sharing either, but it’s something that haunts me everyday. I will refer to this simply as “The Nightmare,” as it still gives me nightmares. Needless to say, I was not really in a place to do math at that time. Math requires deep concentration, and when your thoughts are cluttered with other things it’s really not possible to do math. I also had an overwhelming feeling that my pursuit was selfish. I was away from my family and my brother who I believe needed me. The math that I was working on was so specialized that I couldn’t share it with anyone except other students in my program. I felt further isolated by doing math and I certainly didn’t feel like I was doing anything that was helping anyone else.
-          figure.float-right.pl-3.p-2
+          figure.float-end.pl-3.p-2
             .img-post
               img(src='/images/post-0-img-2.png', alt='local performance')
             figcaption
@@ -37,7 +37,7 @@ block content
             p I went to Title IX to talk about what had happened to me. They acknowledged that my story indicated that this instructor should be investigated for sexual discrimination. However, they suggested that I drop out of the program! They said that during the investigation, the instructor would know that I had filed a report against him, which would make things difficult for me since he would be grading my exams. I did not move forward with the report.
             p After that, I wanted to just drop out. I couldn’t manage everything going on with me personally, and I no longer felt welcome in the program. These experiences killed my love of math, at least for a few years. One of my peers talked me into staying for a bit longer, but it was rough. I also was approached by another one of my instructors who wanted to do research with me, which was encouraging. (Students often have to ask instructors to work with them, not the other way around.) This instructor told me that I was the only student who would redo homework assignments after reading her feedback, and I guess she could see my drive. Clearly I was not a lazy student.
             p I really tried to get back into math, but I just couldn’t at that time. I couldn’t study on campus anymore because I’d always run into my previous mentor. One time I walked into the shared grad student offices to be greeted by a sign saying “No girls allowed.” I appreciated the support of my advisor, but her research was not in the field that I was interested in either. I stuck it out for as long as I could (three years) but I just couldn’t continue after that. I also hated the idea of not performing to the best of my abilities, and I knew I could not do that at UCSC.
-          figure.float-left.pr-3.p-2
+          figure.float-start.pr-3.p-2
             .img-post-sq
               img(src='/images/post-0-img-3.png', alt='contortion training')
             figcaption
@@ -85,5 +85,5 @@ block content
                 p #{comment.date.toDateString()}
                 p #{comment.message}
               .w-50.p-3
-    footer.float-right
+    footer.float-end
       p &#169; 2021 Jody Ryker
