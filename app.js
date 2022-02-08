@@ -15,7 +15,15 @@ const express = require('express'),
       app = express(),
       port = process.env.PORT;
 
+
+
 //Middlewares
+const compression = require('compression');
+app.use(compression());
+
+const helmet = require('helmet');
+app.use(helmet());
+
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -51,4 +59,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`pdApp listening on port ${port}!`));
