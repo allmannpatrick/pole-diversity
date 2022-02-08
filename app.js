@@ -29,7 +29,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //permission to serve static files
-app.use(express.static(path.join('public')));
+app.use(express.static('public'));
 
 // View engine
 app.set('views', path.join('views'));
