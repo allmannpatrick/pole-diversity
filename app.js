@@ -22,7 +22,24 @@ const compression = require('compression');
 app.use(compression());
 
 const helmet = require('helmet');
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: {directives: {
+      frameSrc: [
+        '*.google.com',
+        '*.youtube.com'
+      ].concat([
+  "'self'",
+]),
+      scriptSrc: [
+        "'unsafe-eval'",
+        "'unsafe-inline'",
+        '*.jsdelivr.net',
+      ].concat([
+  "'self'",
+]),
+    }},
+    crossOriginEmbedderPolicy: false,
+  }));
 
 const bodyParser = require('body-parser');
 
