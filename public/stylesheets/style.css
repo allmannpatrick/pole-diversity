@@ -62,11 +62,6 @@ figcaption {
 .card-wrap {
   border: 1px solid black;
 }
-@media (screen) and (max-width: 10024px){
-  body {
-    display:block;
-  }
-}
 img {
   max-width: 100%;
 }
