@@ -22,52 +22,6 @@ const compression = require('compression');
 app.use(compression());
 
 const helmet = require('helmet');
-// app.use(helmet({
-//     contentSecurityPolicy: {directives: {
-//       styleSrc: [
-//         '*.jsdelivr.net',
-//         '*.fontlibrary.org'
-//       ].concat([
-//         "'self'",
-//       ]),
-//       frameSrc: [
-//         "'unsafe-inline'",
-//         '*.google.com',
-//         '*.youtube.com'
-//       ].concat([
-//         "'self'",
-//       ]),
-//       scriptSrc: [
-//         "'unsafe-eval'",
-//         "'unsafe-inline'",
-//         '*.instagram.com',
-//         '*.jsdelivr.net',
-//       ].concat([
-//         "'self'",
-//       ]),
-//     }},
-//     crossOriginEmbedderPolicy: false,
-// }));
-// const helmet = require('helmet');
-// app.use(helmet({
-//     contentSecurityPolicy: {directives: {
-//       frameSrc: [
-//         '*.google.com',
-//         '*.youtube.com'
-//       ].concat([
-//   "'self'",
-// ]),
-//       scriptSrc: [
-//         "'unsafe-eval'",
-//         "'unsafe-inline'",
-//         '*.jsdelivr.net',
-//       ].concat([
-//   "'self'",
-// ]),
-//     }},
-//     crossOriginEmbedderPolicy: false,
-//   }));
-
 const trusted = [
   "'self'","'unsafe-eval'","'unsafe-inline'",
 ];
