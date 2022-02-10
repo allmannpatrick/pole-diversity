@@ -1,7 +1,6 @@
 body {
   background: #969696;
-  font-family: 'GlacialIndifferenceRegular';
-  font-size: 16px;
+  font-size: 20px;
   color: black !important;
 }
 a:link {
@@ -36,7 +35,6 @@ nav .header-logo > img {
 .navbar-nav > li > .dropdown-menu >.dropdown-item:hover { background-color: #969696; }
 figcaption {
   font-size: 12px;
-  text-align: center;
 }
 .img-card > img {
   width: 100%;
@@ -60,7 +58,7 @@ figcaption {
   border: 1px solid black;
 }
 .date-font {
-  font-size: 12px;
+  font-size: 14px;
 }
 .card-wrap {
   border: 1px solid black;

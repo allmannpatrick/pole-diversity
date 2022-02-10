@@ -35,4 +35,9 @@ router.get('/about', (req, res) => {
   })
 })
 
+router.get('/about/privacy-policy', (req, res) => {
+  res.render('privacy-policy', {
+    title: 'Privacy Policy'
+  })
+})
 module.exports = router

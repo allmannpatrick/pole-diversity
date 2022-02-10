@@ -5,7 +5,7 @@ const Post = require('../models/posts'),
       async = require('async')
 
 exports.blog_create_get = function(req, res, next) {
-  const titles = [{title:'Math, Sexism, and Pole Dance', date: '2021 May 30'}, {title: 'How to Plan a Pole Dance or Aerial Class', date: '2021 Jun 13'}]
+  const titles = [{title: "Deep Core Activation for Aerialists & Pole Dancers", date: '2021 July 12', postNo: 3}, {title: 'My Experience as an Autistic Pole Dancer', date: '2021 Jul 3', postNo: 2}, {title: 'How to Plan a Pole Dance or Aerial Class', date: '2021 Jun 13', postNo: 1}, {title:'Math, Sexism, and Pole Dance', date: '2021 May 30', postNo: 0},]
   createPosts(titles)
   res.redirect('/blog')
 };
