@@ -1,5 +1,5 @@
 extends layout
-include posts
+include blogPosts
 block content
   .container-lg
     article.p-2.article-wrap
@@ -26,4 +26,4 @@ block content
               p #{comment.message}
             .w-50.p-3
   footer.float-end
-    p &#169; 2021 Jody Ryker
+    p #{data.post.date} &#169; 2021 Jody Ryker

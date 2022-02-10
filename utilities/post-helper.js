@@ -20,7 +20,8 @@ module.exports = (titles) => {
             title: titles[i].title,
             spine: spinalCase(titles[i].title),
             date: titles[i].date,
-            img: 'post-'+i+'-img-1.png'
+            img: 'post-'+i+'-img-1.png',
+            count: 0
         });
     post.save(function (err) {
         if (err) { return err; }

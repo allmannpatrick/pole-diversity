@@ -5,7 +5,7 @@ const Post = require('../models/posts'),
       async = require('async')
 
 exports.blog_create_get = function(req, res, next) {
-  const titles = [{title:'Math, Sexism, and Pole Dance', date: '2021 Jun 13'}, {title: 'How to Plan a Pole Dance or Aerial Class', date: '2021 Jun 13'}]
+  const titles = [{title:'Math, Sexism, and Pole Dance', date: '2021 May 30'}, {title: 'How to Plan a Pole Dance or Aerial Class', date: '2021 Jun 13'}]
   createPosts(titles)
   res.redirect('/blog')
 };
@@ -42,7 +42,9 @@ exports.blog_get = function(req, res, next) {
           err.status = 404;
           return next(err);
       }
-
+      results.post.count+=1;
+      results.post.save(function (err) {
+          if (err) { return err; }})
       // Successful, so render.
       res.render('blogTemplate', {spine: spine, title: results.post.title, data: results});
   })
