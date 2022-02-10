@@ -59,6 +59,9 @@ figcaption {
 .article-wrap {
   border: 1px solid black;
 }
+.date-font {
+  font-size: 12px;
+}
 .card-wrap {
   border: 1px solid black;
 }

@@ -44,10 +44,9 @@ exports.blog_get = function(req, res, next) {
       }
 
       // Successful, so render.
-      res.render(spine, {spine: spine, title: results.post.title, data: results});
+      res.render('blogTemplate', {spine: spine, title: results.post.title, data: results});
   })
 };
-
 
 exports.blog_post =  [
 

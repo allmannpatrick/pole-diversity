@@ -11,4 +11,6 @@ router.get('/blog/:spine', blog_controller.blog_get);
 //post comments
 router.post('/blog/:spine', blog_controller.blog_post);
 
+
+
 module.exports = router
