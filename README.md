@@ -19,4 +19,4 @@ This is a simple website for a circus troupe. It hosts some embedded instagram p
 6. [Setup nodejs server with Nginx](https://blog.logrocket.com/how-to-run-a-node-js-server-with-nginx/)
 
 
-### currently [roadpeoples.com](https://roadpeoples.com)
+### [blog.roadpeoples.com](blog.https://roadpeoples.com)
