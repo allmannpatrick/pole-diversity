@@ -17,3 +17,6 @@ This is a simple website for a circus troupe. It hosts some embedded instagram p
 5. [helmet and contentSecurityPolicy](https://stackoverflow.com/questions/61471953/helmet-and-contentsecuritypolicy-and-using-nonce-and-adding-it-but-still-getting)
 
 6. [Setup nodejs server with Nginx](https://blog.logrocket.com/how-to-run-a-node-js-server-with-nginx/)
+
+content of website moved to
+## https://polediversity.com
